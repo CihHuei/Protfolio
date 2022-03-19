@@ -489,6 +489,7 @@ html, body {
   color: #454545;
   font-size: 15px;
   margin-top: 8px;
+  font-weight: 500;
 }
 @media screen and (max-width: 600px) {
   .arrowzone .prebtn p, .arrowzone .nextbtn p {
@@ -716,21 +717,28 @@ html, body {
   -webkit-transform: rotate(-2deg);
           transform: rotate(-2deg);
 }
+.intro .web:hover a {
+  background-color: #FFEE00;
+}
 .intro .web a {
   text-decoration: none;
-  color: #9B9B9B;
+  color: #454545;
   font-size: 16px;
+  font-weight: 500;
   background-color: #F2F2F2;
+  border: solid 1px #454545;
+  border-radius: 30px;
   z-index: 2;
   display: block;
-  padding: 10px 15px;
+  padding: 10px 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 .intro .web hr {
   width: 735px;
+  border-top: 0;
+  border-bottom: 1px solid #454545;
   color: #454545;
-  opacity: 80%;
   position: absolute;
   top: 27%;
   left: 0;
