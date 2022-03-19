@@ -108,6 +108,7 @@ html, body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  z-index: 300;
 }
 @media screen and (max-width: 600px) {
   .head .head_contain .nav ul {
