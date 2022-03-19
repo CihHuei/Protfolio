@@ -128,11 +128,11 @@ $secondcolor:#FFEE00
             ul
                 display: flex
                 align-items: flex-end
-                z-index: 300
                 @include phone600
                     margin-top: 30px
                 li
                     float: left
+                    z-index: 1000
                     &:hover
                         transform: rotate(-2deg)
                     a
@@ -276,8 +276,12 @@ $secondcolor:#FFEE00
     margin: auto
     width: 200px
     padding-top: 150px
+    @include pad1024
+        padding-top: 120px
     @include pad768
         padding-top: 100px
+    @include phone600
+        padding-top: 70px
     a
         text-decoration: none
         display: block
@@ -301,12 +305,12 @@ $secondcolor:#FFEE00
 .arrowzone
     width: 100%
     position: fixed
-    bottom:60%
+    top:40%
     z-index: 200
     @include notebook1280
-        bottom:20%
+        top:80%
     @include phone600
-        bottom: 7%
+        top: 0
     .prebtn
         position: fixed
         top: 80%
@@ -331,8 +335,8 @@ $secondcolor:#FFEE00
             column-gap: 10px
             background-color: #F2F2F2
             width: 50%
-            height: 50px
-            opacity: .7
+            height: 70px
+            opacity: .9
             border-radius: 0
             box-sizing: border-box
         &:hover
@@ -347,11 +351,13 @@ $secondcolor:#FFEE00
             img
                 width: 100%
         p
-            color: $secondfontcolor
+            color: $fontcolor
             font-size: 15px
             margin-top: 8px
             @include phone600
                 margin-top: 0
+                font-size: 18px
+               
     .nextbtn
         justify-content: flex-end
         .btnpic
@@ -534,7 +540,7 @@ $secondcolor:#FFEE00
         @include pad768
             width: calc(25% - 15px)
         @include phone600
-            width: calc(40% - 15px)
+            width: calc(50% - 15px)
         img
             width: 100%
             &:hover
@@ -765,13 +771,17 @@ $secondcolor:#FFEE00
             font-weight: $boldfontweight
             margin-bottom: 50px
             position: relative
+            @include phone600
+                margin-bottom: 40px
             &::after
                 @include titleAfter
                 left: -15%
 
     .pic
         max-width:200px
-        margin-bottom: 30px
+        margin-bottom: 10px
+        @include phone600
+            margin-bottom: 0
         img
             width: 100%
     .txt
@@ -783,6 +793,8 @@ $secondcolor:#FFEE00
         align-items: center
         padding: 35px 100px 30px 100px
         position: relative
+        @include phone600
+            padding:30px 100px 25px 100px
         .name
             position: absolute
             top:-25px
@@ -826,10 +838,12 @@ $secondcolor:#FFEE00
     justify-content: center
     align-items: center
     padding-top: 150px
-    @include pad1024
+    @include notebook1280
         padding-top: 120px
-    @include phone600
+    @include pad1024
         padding-top: 80px
+    @include phone600
+        padding-top: 60px
     .title
         h2
             font-size: $h1fontsize
@@ -837,6 +851,8 @@ $secondcolor:#FFEE00
             font-weight: $boldfontweight
             margin-bottom: 65px
             position: relative
+            @include phone600
+                margin-bottom: 50px
             &::after
                 @include titleAfter
                 left: -45%
@@ -995,6 +1011,7 @@ $secondcolor:#FFEE00
     .pic
         width: 100%
         display: flex
+        justify-content: center
         flex-wrap: wrap
         column-gap: 20px
         row-gap: 40px
