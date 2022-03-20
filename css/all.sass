@@ -376,7 +376,8 @@ $secondcolor:#FFEE00
                 color: #ffffff
                 font-weight: 500
     .nextbtn
-        justify-content: flex-end
+        @include phone600
+            justify-content: flex-end
         .btnpic
             @include phone600
                 order:2
@@ -909,6 +910,8 @@ $secondcolor:#FFEE00
         display: flex
         flex-direction: column
         row-gap: 50px
+        @include phone600
+            row-gap: 40px
         .item
             display: flex
             column-gap: 45px

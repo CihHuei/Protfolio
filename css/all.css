@@ -529,10 +529,12 @@ html, body {
     font-weight: 500;
   }
 }
-.arrowzone .nextbtn {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+@media screen and (max-width: 600px) {
+  .arrowzone .nextbtn {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 @media screen and (max-width: 600px) {
   .arrowzone .nextbtn .btnpic {
@@ -1579,6 +1581,11 @@ html, body {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 50px;
+}
+@media screen and (max-width: 600px) {
+  .content_5 .wrap {
+    row-gap: 40px;
+  }
 }
 .content_5 .wrap .item {
   display: -webkit-box;
