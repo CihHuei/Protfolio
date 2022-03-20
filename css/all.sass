@@ -315,10 +315,14 @@ $secondcolor:#FFEE00
         position: fixed
         top: 80%
         left: 5px
+        @include phone600
+            left: 0
     .nextbtn
         position: fixed
         top: 80%
         right: 5px
+        @include phone600
+            right: 0
     .prebtn, .nextbtn
         text-decoration: none
         display: flex
@@ -340,12 +344,12 @@ $secondcolor:#FFEE00
             opacity: 1
             border-radius: 0
             box-sizing: border-box
-            left:0
-            right:0
         &:hover
             opacity: 1
             transform: rotate(-2deg)
             background-color: $secondcolor
+            @include phone600
+                background-color: $fontcolor 
         .btnpic
             width: 15px
             margin-top: 5px
@@ -354,6 +358,13 @@ $secondcolor:#FFEE00
                 margin-top: 3px
             img
                 width: 100%
+            .white
+                display: none
+                @include phone600
+                    display: block
+            .black
+                @include phone600
+                    display: none
         p
             color: $fontcolor
             font-size: 15px

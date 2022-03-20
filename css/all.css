@@ -425,10 +425,20 @@ html, body {
   top: 80%;
   left: 5px;
 }
+@media screen and (max-width: 600px) {
+  .arrowzone .prebtn {
+    left: 0;
+  }
+}
 .arrowzone .nextbtn {
   position: fixed;
   top: 80%;
   right: 5px;
+}
+@media screen and (max-width: 600px) {
+  .arrowzone .nextbtn {
+    right: 0;
+  }
 }
 .arrowzone .prebtn, .arrowzone .nextbtn {
   text-decoration: none;
@@ -466,8 +476,6 @@ html, body {
     border-radius: 0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    left: 0;
-    right: 0;
   }
 }
 .arrowzone .prebtn:hover, .arrowzone .nextbtn:hover {
@@ -475,6 +483,11 @@ html, body {
   -webkit-transform: rotate(-2deg);
           transform: rotate(-2deg);
   background-color: #FFEE00;
+}
+@media screen and (max-width: 600px) {
+  .arrowzone .prebtn:hover, .arrowzone .nextbtn:hover {
+    background-color: #454545;
+  }
 }
 .arrowzone .prebtn .btnpic, .arrowzone .nextbtn .btnpic {
   width: 15px;
@@ -488,6 +501,19 @@ html, body {
 }
 .arrowzone .prebtn .btnpic img, .arrowzone .nextbtn .btnpic img {
   width: 100%;
+}
+.arrowzone .prebtn .btnpic .white, .arrowzone .nextbtn .btnpic .white {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .arrowzone .prebtn .btnpic .white, .arrowzone .nextbtn .btnpic .white {
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .arrowzone .prebtn .btnpic .black, .arrowzone .nextbtn .btnpic .black {
+    display: none;
+  }
 }
 .arrowzone .prebtn p, .arrowzone .nextbtn p {
   color: #454545;
