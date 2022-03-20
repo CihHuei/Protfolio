@@ -314,34 +314,38 @@ $secondcolor:#FFEE00
     .prebtn
         position: fixed
         top: 80%
-        left: 0
+        left: 5px
     .nextbtn
         position: fixed
         top: 80%
-        right: 0
+        right: 5px
     .prebtn, .nextbtn
         text-decoration: none
         display: flex
         flex-direction: column
         align-items: center
-        background-color: #F2F2F2
+        background-color: #fff
+        border: solid 1px $fontcolor
         border-radius: 50%
         padding: 20px
-        opacity: .7
+        opacity: .9
         width: 60px
         height: 60px
         @include phone600
             flex-direction: row
             column-gap: 10px
-            background-color: #F2F2F2
+            background-color: $fontcolor
             width: 50%
             height: 70px
-            opacity: .9
+            opacity: 1
             border-radius: 0
             box-sizing: border-box
+            left:0
+            right:0
         &:hover
             opacity: 1
             transform: rotate(-2deg)
+            background-color: $secondcolor
         .btnpic
             width: 15px
             margin-top: 5px
@@ -353,11 +357,13 @@ $secondcolor:#FFEE00
         p
             color: $fontcolor
             font-size: 15px
-            margin-top: 8px
-            font-weight: 500
+            margin-top: 5px
+            font-weight: 700
             @include phone600
                 margin-top: 0
                 font-size: 18px
+                color: #ffffff
+                font-weight: 500
     .nextbtn
         justify-content: flex-end
         .btnpic
