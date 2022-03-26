@@ -712,7 +712,6 @@ html, body {
 }
 .bottom .icon_zone a img {
   width: 50%;
-  display: block;
   vertical-align: middle;
 }
 .bottom p {
