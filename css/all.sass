@@ -197,15 +197,17 @@ $secondcolor:#FFEE00
     max-width: 1280px
     margin: auto
     display: flex
+    flex-wrap: wrap
     justify-content: center
+    padding: 0 50px
     @include pad1024
         max-width: 900px
     @include phone600
         flex-direction: column
         padding: 0 30px
-    .item1, .item2, .item3
-        width: 380px
-        height: 580px
+    .item1, .item2, .item3, .item4
+        width: 25%
+        height: 450px
         transition: .5s
         &:hover
             background-color: $fontcolor
@@ -219,11 +221,12 @@ $secondcolor:#FFEE00
                     width: 150px
                     height:150px
         @include pad1024
-            width: 200px
+            width: 50%
             height: 300px
         @include phone600
             width: 100%
             height: 200px
+            padding: 0
         a
             text-decoration: none
             display: flex
@@ -234,10 +237,12 @@ $secondcolor:#FFEE00
                 width: 280px
                 height: 280px
                 border-radius: 50%
+                @include notebook1280
+                    width: 200px
+                    height:200px
                 @include pad1024
                     width: 170px
                     height:170px
-
                 ul
                     display: flex
                     flex-direction: column
@@ -255,20 +260,41 @@ $secondcolor:#FFEE00
                         font-size: $fontsize
                         font-weight: 500
     .item1
-        background-color: #B7B7B7
+        background-color: #cccccc
         transform: rotate(5deg)
+        @include pad1024
+            transform: rotate(-3deg)
         .shape
-            background-color: #C8C8C8
+            background-color: #d6d6d6
     .item2
-        background-color: #CACACA
-        transform: rotate(-5deg)
+        background-color: #d1d1d1
+        transform: rotate(5deg)
+        @include pad1024
+            transform: rotate(3deg)
+            margin-top: -30px
+        @include phone600
+            margin-top: 0
+            transform: rotate(-3deg)
         .shape
-            background-color: #B9B9B9
+            background-color: #c5c5c5
     .item3
         background-color: #D6D6D6
-        transform: rotate(5deg)
+        transform: rotate(-5deg)
+        @include pad1024
+            transform: rotate(-3deg)
+            margin-top: -30px
+        @include phone600
+            margin-top: 0
+            transform: rotate(3deg)
         .shape
             background-color: #E0E0E0
+    .item4
+        background-color: #e0e0e0
+        transform: rotate(-5deg)
+        @include pad1024
+            transform: rotate(3deg)
+        .shape
+            background-color: #cccccc
 
 
 //回作品總覽按鈕//
@@ -753,7 +779,7 @@ $secondcolor:#FFEE00
 
 
 
-//產業資料庫//
+//產業資料庫// 
 .data_container
     max-width: 1280px
     margin: auto
@@ -775,8 +801,82 @@ $secondcolor:#FFEE00
             width: 100%
             vertical-align: middle
             image-rendering: -webkit-optimize-contrast
+
                     
-           
+//台股擂台//
+.stock_container
+    max-width: 1280px
+    margin: auto
+    padding-top: 120px
+    display: flex
+    flex-direction: column
+    align-items: center 
+    .apic
+        max-width: 60%
+        margin: auto
+        @include pad1024
+            max-width: 80%
+        @include phone600
+            max-width: 95%
+        img
+            width: 100%
+            vertical-align: middle
+            image-rendering: -webkit-optimize-contrast
+    .pic_pc
+        @include phone600
+            display: none
+    .pic_mobile
+        display: none
+        @include phone600
+            display: block
+    .vdo
+        width: 100%
+        padding: 0 0 30px 0
+        video
+            width: 60%
+            @include pad1024
+                width: 80%
+            @include phone600
+                width: 95%
+        .VDOpc
+            @include phone600
+                display: none
+        .VDOmobile
+            display: none
+            @include phone600
+                display: block
+
+
+//福虎抽紅包//
+.tiger_container
+    max-width: 1280px
+    margin: auto
+    padding-top: 120px
+    display: flex
+    flex-direction: column
+    align-items: center 
+    .apic
+        max-width: 60%
+        margin: auto
+        @include pad1024
+            max-width: 80%
+        @include phone600
+            max-width: 95%
+        img
+            width: 100%
+            vertical-align: middle
+            image-rendering: -webkit-optimize-contrast
+    .pic_pc
+        @include phone600
+            display: none
+    .pic_mobile
+        display: none
+        @include phone600
+            display: block
+
+
+
+
 
 //關於我//
 .content_1
@@ -899,7 +999,7 @@ $secondcolor:#FFEE00
             color: $fontcolor
             font-size: $fontsize
             font-weight: 500
-                
+            
 .content_3, .content_4
     .title
         h2
@@ -969,6 +1069,8 @@ $secondcolor:#FFEE00
                     column-gap: 10px
                     flex-wrap: wrap
                     row-gap: 5px
+                    @include phone600
+                        column-gap: 5px
                     a
                         text-decoration: none
                         color: $fontcolor
